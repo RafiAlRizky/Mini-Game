@@ -21,3 +21,12 @@ Pastikan kamu memiliki browser web modern yang mendukung HTML5 dan JavaScript.
 
    ```bash
    git clone https://github.com/RafiAlRizky/Mini-Game.git
+
+2. Buka file index.html di browser pilihan kamu.
+
+## 🛠️ Cara Bermain
+
+1. Gunakan tombol panah untuk bergerak.
+2. Serang musuh untuk mendapatkan energi.
+3. Makan untuk memulihkan energi.
+4. Cobalah untuk bertahan hidup selama mungkin dan raih skor tertinggi!
