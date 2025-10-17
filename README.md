@@ -30,3 +30,7 @@ Pastikan kamu memiliki browser web modern yang mendukung HTML5 dan JavaScript.
 2. Serang musuh untuk mendapatkan energi.
 3. Makan untuk memulihkan energi.
 4. Cobalah untuk bertahan hidup selama mungkin dan raih skor tertinggi!
+
+## 📄 Lisensi
+
+Proyek ini dilisensikan di bawah MIT License.
