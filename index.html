@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Menjalankan JavaScript</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini Game: Duel Pemain</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
         
@@ -19,16 +19,16 @@
             --text-secondary: #6B7280;
         }
 
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            padding: 24px; 
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding: 24px;
             background: var(--background);
             color: var(--text);
             line-height: 1.5;
         }
 
-        .game { 
-            max-width: 900px; 
+        .game {
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -37,7 +37,7 @@
             margin-bottom: 2rem;
         }
 
-        header h1 { 
+        header h1 {
             margin: 0 0 12px 0;
             color: var(--primary);
             font-size: 2.5rem;
@@ -50,25 +50,27 @@
             margin: 0 auto;
         }
 
-        .players { 
-            display: flex; 
-            gap: 24px; 
+        .players {
+            display: flex;
+            gap: 24px;
             margin-bottom: 24px;
         }
 
-        .player { 
+        .player {
             flex: 1;
             background: var(--card);
             border-radius: 16px;
             padding: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),
+                        0 2px 4px -2px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
         .player.current-turn {
-            box-shadow: 0 0 0 3px var(--primary), 0 4px 6px -1px rgba(0,0,0,0.1);
+            box-shadow: 0 0 0 3px var(--primary),
+                        0 4px 6px -1px rgba(0,0,0,0.1);
             transform: translateY(-2px);
         }
 
@@ -102,27 +104,28 @@
             font-size: 1.25rem;
         }
 
-        .bar { 
-            height: 24px; 
+        .bar {
+            height: 24px;
             background: #EEE;
-            border-radius: 12px; 
+            border-radius: 12px;
             overflow: hidden;
             margin-bottom: 16px;
         }
 
-        .bar > .fill { 
-            height: 100%; 
+        .bar > .fill {
+            height: 100%;
             background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
             width: 100%;
             transition: width 0.4s ease-out;
         }
 
-        .controls { 
-            display: flex; 
+        .controls {
+            display: flex;
             gap: 12px;
+            margin-bottom: 16px;
         }
 
-        button { 
+        button {
             padding: 12px 20px;
             border-radius: 12px;
             border: 2px solid transparent;
@@ -196,11 +199,36 @@
             font-size: 1.25rem;
         }
 
-        #log { 
+        /* INVENTORY STYLE */
+        .inventory {
+            background: #F9FAFB;
+            border-radius: 12px;
+            padding: 12px;
+            margin-top: 12px;
+            border: 1px solid #E5E7EB;
+        }
+
+        .inventory h4 {
+            margin: 0 0 8px 0;
+            font-size: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .inventory .items button {
+            margin: 4px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            font-size: 0.85rem;
+            padding: 6px 10px;
+            border-radius: 8px;
+        }
+
+        #log {
             background: #1A1A1A;
             color: #FFF;
             padding: 16px;
-            height: 160px;
+            height: 180px;
             overflow: auto;
             border-radius: 12px;
             font-family: 'Consolas', monospace;
@@ -227,28 +255,23 @@
             100% { background: var(--card); }
         }
 
-        .player.damage {
-            animation: damage 0.6s ease;
-        }
-
-        .player.heal {
-            animation: heal 0.6s ease;
-        }
+        .player.damage { animation: damage 0.6s ease; }
+        .player.heal { animation: heal 0.6s ease; }
     </style>
 </head>
 <body>
     <div class="game">
         <header>
-            <h1>Mini Game: Duel Pemain</h1>
-            <p>Mainkan duel antara dua pemain: tekan Attack untuk menyerang lawan, Heal untuk memulihkan energi.</p>
+            <h1>Mini Game: Duel Pemain ⚔️</h1>
+            <p>Mainkan duel antara dua pemain. Tekan <strong>Attack</strong> untuk menyerang lawan, <strong>Heal</strong> untuk memulihkan energi, dan gunakan item dari inventory!</p>
         </header>
 
         <section class="players">
             <div class="player" id="player1">
-                <!-- player 1 rendered by JS -->
+                <!-- Player 1 dirender lewat JS -->
             </div>
             <div class="player" id="player2">
-                <!-- player 2 rendered by JS -->
+                <!-- Player 2 dirender lewat JS -->
             </div>
         </section>
 
@@ -266,4 +289,5 @@
 
     <script src="latihan.js"></script>
 </body>
-</html>
+    </html>
+    
